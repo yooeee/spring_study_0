@@ -16,7 +16,7 @@ public class SpringStudy0Application {
     }
     @GetMapping( value="/")
     public String test(){
-        return "testas";
+        return "testasssssss";
     }
 
 }
