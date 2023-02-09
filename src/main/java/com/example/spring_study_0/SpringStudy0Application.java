@@ -19,4 +19,9 @@ public class SpringStudy0Application {
         return "testasssssss2222222";
     }
 
+    @GetMapping( value="/wow")
+    public String wow(){
+        return "wow";
+    }
+
 }
