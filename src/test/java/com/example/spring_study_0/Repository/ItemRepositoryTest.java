@@ -2,6 +2,8 @@ package com.example.spring_study_0.Repository;
 
 import com.example.spring_study_0.constant.ItemSellStatus;
 import com.example.spring_study_0.entity.Item;
+import com.querydsl.jpa.impl.JPAQuery;
+import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.junit.jupiter.api.DisplayName;
