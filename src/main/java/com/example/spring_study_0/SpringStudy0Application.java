@@ -5,24 +5,29 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
-@RestController
-
+@SpringBootApplication
+@Controller
 public class SpringStudy0Application {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringStudy0Application.class, args);
     }
-    @GetMapping( value="/")
-    public String test(){
-        return "testasssssss2222222";
+    @GetMapping(value = "/")
+    public String index(){
+        return "pages/index";
     }
 
-    @GetMapping( value="/wow")
-    public String wow(){
-        return "wow";
+    @GetMapping( value="/loginpage")
+    public String login(){
+        return "pages/login_page";
+    }
+
+    @GetMapping( value="/registerpage")
+    public String register(){
+        return "pages/register_page";
     }
 
 }

@@ -32,9 +32,9 @@ public class ThymeleafExController {
         return "thymeleafEx/thymeleafEx02";
     }
 
-    @GetMapping(value = "/ex07")
+    @GetMapping(value = "/333")
     public String thymeleafExample07(){
-        return "thymeleafEx/thymeleafEx07";
+        return "layouts/index";
     }
 
 }
