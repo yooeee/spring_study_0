@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@Controller
 public class SpringStudy0Application {
 
     public static void main(String[] args) {
@@ -20,15 +19,14 @@ public class SpringStudy0Application {
         return "pages/index";
     }
 
-    @GetMapping( value="/loginpage")
-    public String login(){
-        return "pages/login_page";
+    @GetMapping(value = "/member")
+    public String index2(){
+        return "member/memberForm";
     }
 
-    @GetMapping( value="/registerpage")
-    public String register(){
-        return "pages/register_page";
-    }
+
+
+
 
 }
 

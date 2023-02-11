@@ -1,6 +1,6 @@
 package com.example.spring_study_0.entity;
 import com.example.spring_study_0.constant.ItemSellStatus;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
