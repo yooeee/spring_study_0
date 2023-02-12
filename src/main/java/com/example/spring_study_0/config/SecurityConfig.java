@@ -20,14 +20,14 @@ public class SecurityConfig {
         //http.csrf().disable();
 
         http.formLogin()
-                .loginPage("/member/login")
+                .loginPage("/test/login")
                 .defaultSuccessUrl("/")
                 .usernameParameter("email")
 
-                .failureUrl("/member/login/error")
+                .failureUrl("/test/login/error")
                 .and()
                 .logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/member/logout"))
+                .logoutRequestMatcher(new AntPathRequestMatcher("/test/logout"))
                 .logoutSuccessUrl("/");
 
         http.authorizeRequests()

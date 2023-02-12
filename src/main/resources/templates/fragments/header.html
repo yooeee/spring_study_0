@@ -12,12 +12,9 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">상품 등록</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">상품 관리</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">장바구니</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">구매이력</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">로그인</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">로그아웃</a></li>
+          <li><a href="#" class="nav-link px-2 text-white" sec:authorize="isAuthenticated()">글 쓰기</a></li>
+          <li><a href="#" class="nav-link px-2 text-white" sec:authorize="isAuthenticated()">글 조회</a></li>
+
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -25,8 +22,13 @@
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <button type="button" onclick="location.href='/test/login'" class="btn btn-outline-light me-2"
+          sec:authorize="isAnonymous()">Login</button>
+          <button type="button" onclick="location.href='/test/register'" class="btn btn-warning"
+          sec:authorize="isAnonymous()">Sign-up</button>
+          <button type="button" onclick="location.href='/test/logout'" class="btn btn-warning"
+                  sec:authorize="isAuthenticated()">LogOut</button>
+
         </div>
       </div>
     </div>

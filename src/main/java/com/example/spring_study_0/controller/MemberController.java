@@ -48,7 +48,24 @@ public class MemberController {
             return "member/memberForm";
         }
 
+        model.addAttribute("successRegister","회원가입에 성공했습니다. 로그인해주세요");
+
         return "redirect:/";
     }
+
+    @GetMapping(value="/login")
+    public String loginMember(){
+        return "member/memberLogin";
+    }
+
+    @GetMapping(value="/login/error")
+    public String loginMember(Model model){
+        model.addAttribute("loginErrorMsg","아이디 또는 비밀번호를 확인해주세요");
+        return "member/memberLogin";
+    }
+
+
+
+
 }
 
